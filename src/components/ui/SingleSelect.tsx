@@ -22,7 +22,7 @@ export interface PaginatedResult<T> {
   };
 }
 
-export interface ISelectOption {
+export interface SelectOption {
   value: string;
   label: string;
   display?: ReactNode;
@@ -30,13 +30,13 @@ export interface ISelectOption {
 
 interface SingleSelectProps {
   /** Fully static list of options — no fetching. */
-  options?: ISelectOption[];
+  options?: SelectOption[];
 
   /**
    * Simple async fetcher: receives the current search string,
    * returns the full (already-filtered) list of options.
    */
-  simpleQueryFn?: (search: string) => Promise<ISelectOption[]>;
+  simpleQueryFn?: (search: string) => Promise<SelectOption[]>;
 
   /**
    * Paginated async fetcher used when `enableInfiniteScroll` is true.
@@ -45,7 +45,7 @@ interface SingleSelectProps {
     page: number;
     pageSize: number;
     search: string;
-  }) => Promise<PaginatedResult<ISelectOption>>;
+  }) => Promise<PaginatedResult<SelectOption>>;
 
   /** Stable cache key array (similar to TanStack Query's queryKey). */
   queryKey?: string[];
@@ -103,8 +103,8 @@ export default function SingleSelect({
   const [debouncedSearch, setDebouncedSearch] = useState("");
 
   // ── Data state ────────────────────────────────────────────────────────────────
-  const [simpleOptions, setSimpleOptions] = useState<ISelectOption[]>([]);
-  const [pagedOptions, setPagedOptions] = useState<ISelectOption[]>([]);
+  const [simpleOptions, setSimpleOptions] = useState<SelectOption[]>([]);
+  const [pagedOptions, setPagedOptions] = useState<SelectOption[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -234,7 +234,7 @@ export default function SingleSelect({
   }, [focusedIndex]);
 
   // ── Computed options ──────────────────────────────────────────────────────────
-  const visibleOptions: ISelectOption[] = staticOptions
+  const visibleOptions: SelectOption[] = staticOptions
     ? staticOptions.filter((o) =>
         o.label.toLowerCase().includes(search.toLowerCase()),
       )
@@ -247,7 +247,7 @@ export default function SingleSelect({
     : null;
 
   // ── Handlers ──────────────────────────────────────────────────────────────────
-  function selectOption(option: ISelectOption) {
+  function selectOption(option: SelectOption) {
     onChange(option.value);
     setOpen(false);
     setSearch("");

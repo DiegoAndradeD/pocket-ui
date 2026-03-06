@@ -1,9 +1,9 @@
 import { useState } from "react";
-import type { ISelectOption } from "../ui/SingleSelect";
+import type { SelectOption } from "../ui/SingleSelect";
 import { ComponentCard } from "../ComponentCard";
 import SingleSelect from "../ui/SingleSelect";
 
-const MOCK_OPTIONS: ISelectOption[] = [
+const MOCK_OPTIONS: SelectOption[] = [
   { value: "react", label: "React" },
   { value: "vue", label: "Vue.js" },
   { value: "angular", label: "Angular" },
