@@ -1,4 +1,2 @@
-import { PaginatedResult } from "./Pagination";
-import { Option, SmartSelectConfig } from "./SmartSelect";
-
-export { PaginatedResult, Option, SmartSelectConfig };
+export type { PaginatedResult } from "./Pagination";
+export type { Option, SmartSelectConfig } from "./SmartSelect";
