@@ -76,6 +76,8 @@ Here are the components currently available in the library.
 
 A highly versatile button component with built-in loading states, icon support, and pure CSS visual effects (ring hover, shine, gooey, underline).
 
+<img width="1920" height="2083" alt="image" src="https://github.com/user-attachments/assets/2218cdf0-0eec-4c04-b85e-461c970ba101" />
+
 ```tsx
 // Example Usage
 import { Button } from "@/components/ui/Button";
@@ -93,6 +95,8 @@ export default function App() {
 ### Input
 
 A customizable text input with support for variants (default, flat, underlined, outline), start/end content slots for icons, and automatic loading spinners.
+
+<img width="1920" height="1655" alt="image" src="https://github.com/user-attachments/assets/7859a88d-b75f-47d2-94af-d9a56ecdf758" />
 
 ```tsx
 // Example Usage
@@ -114,6 +118,8 @@ export default function App() {
 
 A robust, searchable select dropdown. It features local filtering, infinite scroll pagination (via Intersection Observer), keyboard navigation, and click-outside handling.
 
+<img width="1920" height="949" alt="image" src="https://github.com/user-attachments/assets/332e8f7f-2e6e-4545-b832-628fc308c16e" />
+
 ```tsx
 // Example Usage
 import SingleSelect from "@/components/ui/SingleSelect";
@@ -125,6 +131,8 @@ import SingleSelect from "@/components/ui/SingleSelect";
 ### Multi Select
 
 An advanced multi-select dropdown featuring checkbox visuals, tag chip rendering, overflow badges (e.g., "+3 more"), search capabilities, and keyboard accessibility.
+
+<img width="1920" height="1311" alt="image" src="https://github.com/user-attachments/assets/f74aefe6-10f7-4c12-a56c-eda55f70e647" />
 
 ```tsx
 // Example Usage
@@ -139,6 +147,8 @@ import MultiSelect from "@/components/ui/MultiSelect";
 A **zero-dependency** markdown editor and renderer. It includes a custom built-in AST parser, a formatting toolbar, keyboard shortcuts (⌘B, ⌘I), smart list continuation, and split/preview view modes.
 
 *Note: This component requires specific CSS classes to style the rendered prose. Make sure to copy the `.md-editor` styles from `src/index.css`.*
+
+<img width="1920" height="2203" alt="image" src="https://github.com/user-attachments/assets/ad12f8ce-82b5-4031-acc5-7f8fd91311e0" />
 
 ```tsx
 // Example Usage
