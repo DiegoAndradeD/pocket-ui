@@ -76,8 +76,6 @@ Here are the components currently available in the library.
 
 A highly versatile button component with built-in loading states, icon support, and pure CSS visual effects (ring hover, shine, gooey, underline).
 
-> **[Insert Preview Image Here]**
-
 ```tsx
 // Example Usage
 import { Button } from "@/components/ui/Button";
@@ -95,8 +93,6 @@ export default function App() {
 ### Input
 
 A customizable text input with support for variants (default, flat, underlined, outline), start/end content slots for icons, and automatic loading spinners.
-
-> **[Insert Preview Image Here]**
 
 ```tsx
 // Example Usage
@@ -118,8 +114,6 @@ export default function App() {
 
 A robust, searchable select dropdown. It features local filtering, infinite scroll pagination (via Intersection Observer), keyboard navigation, and click-outside handling.
 
-> **[Insert Preview Image Here]**
-
 ```tsx
 // Example Usage
 import SingleSelect from "@/components/ui/SingleSelect";
@@ -132,8 +126,6 @@ import SingleSelect from "@/components/ui/SingleSelect";
 
 An advanced multi-select dropdown featuring checkbox visuals, tag chip rendering, overflow badges (e.g., "+3 more"), search capabilities, and keyboard accessibility.
 
-> **[Insert Preview Image Here]**
-
 ```tsx
 // Example Usage
 import MultiSelect from "@/components/ui/MultiSelect";
@@ -145,8 +137,6 @@ import MultiSelect from "@/components/ui/MultiSelect";
 ### Markdown Editor
 
 A **zero-dependency** markdown editor and renderer. It includes a custom built-in AST parser, a formatting toolbar, keyboard shortcuts (⌘B, ⌘I), smart list continuation, and split/preview view modes.
-
-> **[Insert Preview Image Here]**
 
 *Note: This component requires specific CSS classes to style the rendered prose. Make sure to copy the `.md-editor` styles from `src/index.css`.*
 
