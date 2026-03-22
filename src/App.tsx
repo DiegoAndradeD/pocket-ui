@@ -5,6 +5,7 @@ import {
   InputDemo,
   MultiSelectDemo,
   MarkdownEditorDemo,
+  ImageDemo,
 } from "./components/demo";
 
 const COMPONENTS = [
@@ -16,6 +17,7 @@ const COMPONENTS = [
   { id: "multi-select", name: "Multi Select", component: <MultiSelectDemo /> },
   { id: "button", name: "Button", component: <ButtonDemo /> },
   { id: "input", name: "Input", component: <InputDemo /> },
+  { id: "image", name: "Image", component: <ImageDemo /> },
   {
     id: "markdown-editor",
     name: "Markdown Editor",

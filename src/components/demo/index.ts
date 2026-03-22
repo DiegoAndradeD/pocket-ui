@@ -3,6 +3,7 @@ import { SingleSelectDemo } from "./SingleSelectDemo";
 import { InputDemo } from "./InputDemo";
 import { MultiSelectDemo } from "./MultiSelectDemo";
 import { MarkdownEditorDemo } from "./MarkdownEditorDemo";
+import { ImageDemo } from "./ImageDemo";
 
 export {
   ButtonDemo,
@@ -10,4 +11,5 @@ export {
   InputDemo,
   MultiSelectDemo,
   MarkdownEditorDemo,
+  ImageDemo,
 };

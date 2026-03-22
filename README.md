@@ -142,6 +142,33 @@ import MultiSelect from "@/components/ui/MultiSelect";
 
 ```
 
+### Image
+An advanced image component that takes the pain out of media handling. It features built-in aspect ratio enforcement, automatic shimmer skeletons during network loading, seamless error fallbacks, and support for interactive zoom effects and custom overlays.
+
+> **[Insert Preview Image Here]**
+
+```tsx
+// Example Usage
+import Image from "@/components/ui/Image";
+
+export default function App() {
+  return (
+    <Image
+      src="[https://example.com/photo.jpg](https://example.com/photo.jpg)"
+      aspect="video"
+      radius="lg"
+      isClickable
+      overlay={
+        <div className="absolute top-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md">
+          NEW
+        </div>
+      }
+    />
+  );
+}
+
+```
+
 ### Markdown Editor
 
 A **zero-dependency** markdown editor and renderer. It includes a custom built-in AST parser, a formatting toolbar, keyboard shortcuts (⌘B, ⌘I), smart list continuation, and split/preview view modes.
