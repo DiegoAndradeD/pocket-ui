@@ -7,6 +7,19 @@ A personal, copy-and-paste React UI component library built with TypeScript and 
 
 This is not a component library you install via npm. It's a collection of reusable, highly customizable components that you copy and paste directly into your projects. **You own the code.**
 
+> ⚠️ **Disclaimer: Philosophy & Performance**
+> Pocket UI is designed for **simplicity and transparency**, not extreme performance optimization. The code is written so you can easily read, understand, and modify how every component works under the hood.
+>
+> <details>
+> <summary><b>Click to read more about performance and code formatting</b></summary>
+>
+> **Performance Trade-offs:**
+> These components work perfectly fine on modern devices and standard internet connections. However, they are not hyper-optimized for legacy devices or extremely slow networks. To keep the code simple and easy for you to tweak, I intentionally avoided complex performance patterns (like heavy memoization, virtual DOM tricks, etc.). You own the code, so if your specific app requires aggressive optimization, you have full access to add it!
+>
+> **About the Code Comments:**
+> English is not my primary language. To ensure the inline code comments are concise, grammatically correct, and beautifully formatted, I used **GitHub Copilot** in VSCode to write and structure them. The logic is mine, but Copilot helped make the documentation clean and easy for you to read.
+> </details>
+
 ## 🚀 Features
 
 * **Zero Lock-in:** Copy the code, paste it, and modify it however you want.
