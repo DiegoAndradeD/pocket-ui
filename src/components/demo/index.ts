@@ -4,6 +4,7 @@ import { InputDemo } from "./InputDemo";
 import { MultiSelectDemo } from "./MultiSelectDemo";
 import { MarkdownEditorDemo } from "./MarkdownEditorDemo";
 import { ImageDemo } from "./ImageDemo";
+import { TrayDemo } from "./TrayDemo";
 
 export {
   ButtonDemo,
@@ -12,4 +13,5 @@ export {
   MultiSelectDemo,
   MarkdownEditorDemo,
   ImageDemo,
+  TrayDemo,
 };

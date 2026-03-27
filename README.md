@@ -1,4 +1,7 @@
-# ui-lib
+<h1>
+  <img src="./public/logo.svg" alt="Pocket UI Logo" width="32" align="center" />
+  Pocket UI
+</h1>
 
 A personal, copy-and-paste React UI component library built with TypeScript and Tailwind CSS v4. Heavily inspired by the [shadcn/ui](https://ui.shadcn.com/) philosophy.
 

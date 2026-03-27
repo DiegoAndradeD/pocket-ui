@@ -6,6 +6,7 @@ import {
   MultiSelectDemo,
   MarkdownEditorDemo,
   ImageDemo,
+  TrayDemo,
 } from "./components/demo";
 
 const COMPONENTS = [
@@ -18,6 +19,7 @@ const COMPONENTS = [
   { id: "button", name: "Button", component: <ButtonDemo /> },
   { id: "input", name: "Input", component: <InputDemo /> },
   { id: "image", name: "Image", component: <ImageDemo /> },
+  { id: "tray", name: "Tray", component: <TrayDemo /> },
   {
     id: "markdown-editor",
     name: "Markdown Editor",
@@ -33,9 +35,14 @@ function App() {
   return (
     <div className="flex min-h-screen w-full bg-background text-foreground">
       <aside className="w-64 border-r border-border bg-muted/30 p-6 hidden md:flex md:flex-col shrink-0 overflow-y-auto">
-        <div className="mb-8">
-          <h1 className="text-xl font-bold tracking-tight">ui-lib</h1>
-          <p className="text-sm text-muted-foreground mt-1">Components</p>
+        <div className="flex items-center gap-2 mb-5">
+          <figure className="flex items-center">
+            <img src="./public/logo.svg" alt="Pocket UI Logo" width="32" />
+          </figure>
+          <div className="flex flex-col gap-0">
+            <h1 className="text-xl font-bold tracking-tight">Pocket UI</h1>
+            <p className="text-sm text-muted-foreground -mt-1">Components</p>
+          </div>
         </div>
 
         <nav className="flex flex-col gap-1">
@@ -61,7 +68,7 @@ function App() {
       <main className="flex-1 flex flex-col h-screen overflow-y-auto">
         <div className="max-w-5xl w-full mx-auto p-6 md:p-12">
           <div className="md:hidden mb-8 border-b border-border pb-4">
-            <h1 className="text-xl font-bold">ui-lib</h1>
+            <h1 className="text-xl font-bold">Pocket UI</h1>
             <select
               className="mt-4 w-full p-2 rounded-md border border-border bg-background"
               value={activeComponentId}
