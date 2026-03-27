@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   SingleSelectDemo,
   ButtonDemo,
@@ -8,6 +8,7 @@ import {
   ImageDemo,
   TrayDemo,
 } from "./components/demo";
+import { SunIcon, MoonIcon } from "./components/icons";
 
 const COMPONENTS = [
   {
@@ -29,25 +30,67 @@ const COMPONENTS = [
 
 function App() {
   const [activeComponentId, setActiveComponentId] = useState(COMPONENTS[0].id);
-
   const activeComponent = COMPONENTS.find((c) => c.id === activeComponentId);
 
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("pocket-ui-theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    if (storedTheme === "dark" || (!storedTheme && systemPrefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextDark = !isDark;
+    setIsDark(nextDark);
+
+    if (nextDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("pocket-ui-theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("pocket-ui-theme", "light");
+    }
+  };
+
   return (
-    <div className="flex min-h-screen w-full bg-background text-foreground">
-      <aside className="w-64 border-r border-border bg-muted/30 p-6 hidden md:flex md:flex-col shrink-0 overflow-y-auto">
-        <div className="flex items-center gap-2 mb-5">
-          <figure className="flex items-center">
-            <img src="./public/logo.svg" alt="Pocket UI Logo" width="32" />
-          </figure>
-          <div className="flex flex-col gap-0">
-            <h1 className="text-xl font-bold tracking-tight">Pocket UI</h1>
-            <p className="text-sm text-muted-foreground -mt-1">Components</p>
+    <div className="flex min-h-screen w-full bg-background text-foreground transition-colors duration-300">
+      <aside className="w-64 border-r border-border bg-muted/30 p-6 hidden md:flex md:flex-col shrink-0 overflow-y-auto transition-colors duration-300">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-3">
+            <figure className="flex items-center">
+              <img src="/logo.svg" alt="Pocket UI Logo" width="32" />
+            </figure>
+            <div className="flex flex-col gap-0">
+              <h1 className="text-xl font-bold tracking-tight">Pocket UI</h1>
+              <p className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider -mt-1">
+                Components
+              </p>
+            </div>
           </div>
+
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md text-muted-foreground hover:bg-muted hover:text-foreground transition-colors cursor-pointer"
+            aria-label="Toggle Dark Mode"
+          >
+            {isDark ? (
+              <SunIcon className="w-4 h-4" />
+            ) : (
+              <MoonIcon className="w-4 h-4" />
+            )}
+          </button>
         </div>
 
         <nav className="flex flex-col gap-1">
           <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-            Componentes
+            Catalog
           </h2>
           {COMPONENTS.map((item) => (
             <button
@@ -65,12 +108,29 @@ function App() {
         </nav>
       </aside>
 
-      <main className="flex-1 flex flex-col h-screen overflow-y-auto">
+      <main className="flex-1 flex flex-col h-screen overflow-y-auto relative">
         <div className="max-w-5xl w-full mx-auto p-6 md:p-12">
           <div className="md:hidden mb-8 border-b border-border pb-4">
-            <h1 className="text-xl font-bold">Pocket UI</h1>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img src="/logo.svg" alt="Pocket UI Logo" width="24" />
+                <h1 className="text-xl font-bold">Pocket UI</h1>
+              </div>
+
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-md text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+              >
+                {isDark ? (
+                  <SunIcon className="w-5 h-5" />
+                ) : (
+                  <MoonIcon className="w-5 h-5" />
+                )}
+              </button>
+            </div>
+
             <select
-              className="mt-4 w-full p-2 rounded-md border border-border bg-background"
+              className="mt-4 w-full p-2 rounded-md border border-border bg-background text-foreground"
               value={activeComponentId}
               onChange={(e) => setActiveComponentId(e.target.value)}
             >
@@ -86,7 +146,7 @@ function App() {
             <h1 className="text-3xl font-bold tracking-tight">
               {activeComponent?.name}
             </h1>
-            <hr className="mt-6 border-border" />
+            <hr className="mt-6 border-border transition-colors duration-300" />
           </header>
 
           <div className="pb-20">{activeComponent?.component}</div>
