@@ -84,7 +84,7 @@ export default function Sidebar({
   onOpenChange,
   defaultOpen = true,
   width = "240px",
-  collapsedWidth = "56px",
+  collapsedWidth = "70px",
   header,
   footer,
   classNames,
@@ -158,7 +158,7 @@ export default function Sidebar({
       {/* ── Scrollable content ── */}
       <div
         className={cn(
-          "flex-1 overflow-y-auto overflow-x-hidden",
+          "flex-1 overflow-y-hidden overflow-x-hidden",
           classNames?.content,
         )}
       >
