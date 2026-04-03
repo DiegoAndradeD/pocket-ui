@@ -534,10 +534,7 @@ export default function MultiSelect({
                   "border-primary-foreground/20 text-primary-foreground/60",
               )}
             >
-              <span>
-                {selectedOptions.length} selecionado
-                {selectedOptions.length > 1 ? "s" : ""}
-              </span>
+              <span>{selectedOptions.length} Selected</span>
               <button
                 onClick={(e) => clearAll(e)}
                 className={cn(

@@ -72,7 +72,7 @@ export function MarkdownEditorDemo() {
             value={content2}
             onChange={setContent2}
             viewMode={viewMode}
-            placeholder="Comece a digitar aqui para testar os modos de visualização..."
+            placeholder="Start typing here to test the display modes..."
             className="min-h-75"
           />
         </div>

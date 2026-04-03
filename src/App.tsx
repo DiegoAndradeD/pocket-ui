@@ -7,9 +7,11 @@ import {
   MarkdownEditorDemo,
   ImageDemo,
   TrayDemo,
+  SidebarDemo,
+  ToastDemo,
 } from "./components/demo";
 import { SunIcon, MoonIcon } from "./components/icons";
-import { SidebarDemo } from "./components/demo/SidebarDemo";
+import { ToastProvider } from "./components/ui/toast";
 
 const COMPONENTS = [
   {
@@ -28,6 +30,7 @@ const COMPONENTS = [
     name: "Markdown Editor",
     component: <MarkdownEditorDemo />,
   },
+  { id: "toast", name: "Toast", component: <ToastDemo /> },
 ];
 
 function App() {
@@ -63,6 +66,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen w-full bg-background text-foreground transition-colors duration-300">
+      <ToastProvider position="bottom-right" />
       <aside className="w-64 border-r border-border bg-muted/30 p-6 hidden md:flex md:flex-col shrink-0 overflow-y-auto transition-colors duration-300">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
