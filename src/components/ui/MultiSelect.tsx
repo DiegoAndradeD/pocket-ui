@@ -655,7 +655,7 @@ export default function MultiSelect({
   );
 }
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function ChevronDownIcon({ className }: { className?: string }) {
   return (

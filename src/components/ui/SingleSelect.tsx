@@ -540,7 +540,7 @@ export default function SingleSelect({
   );
 }
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function ChevronDownIcon({ className }: { className?: string }) {
   return (

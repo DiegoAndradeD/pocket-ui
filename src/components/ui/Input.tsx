@@ -131,7 +131,7 @@ Input.displayName = "Input";
 
 export { Input };
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function SpinnerIcon({ className }: { className?: string }) {
   return (

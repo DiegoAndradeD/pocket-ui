@@ -9,6 +9,7 @@ import {
   TrayDemo,
 } from "./components/demo";
 import { SunIcon, MoonIcon } from "./components/icons";
+import { SidebarDemo } from "./components/demo/SidebarDemo";
 
 const COMPONENTS = [
   {
@@ -21,6 +22,7 @@ const COMPONENTS = [
   { id: "input", name: "Input", component: <InputDemo /> },
   { id: "image", name: "Image", component: <ImageDemo /> },
   { id: "tray", name: "Tray", component: <TrayDemo /> },
+  { id: "sidebar", name: "Sidebar", component: <SidebarDemo /> },
   {
     id: "markdown-editor",
     name: "Markdown Editor",

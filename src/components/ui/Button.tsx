@@ -267,7 +267,7 @@ Button.displayName = "Button";
 
 export { Button };
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function SpinnerIcon({ className }: { className?: string }) {
   return (

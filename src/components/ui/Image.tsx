@@ -283,7 +283,7 @@ export default function Image({
   );
 }
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function ImageIcon({ className }: { className?: string }) {
   return (

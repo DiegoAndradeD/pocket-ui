@@ -302,7 +302,7 @@ export default function Tray({
   );
 }
 
-// ─── Inline SVG icons (zero dependencies) ────────────────────────────────────
+// ─── Inline SVG icons  ────────────────────────────────────
 
 function ChevronIcon({ className }: { className?: string }) {
   return (
